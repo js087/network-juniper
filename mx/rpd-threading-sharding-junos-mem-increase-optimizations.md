@@ -1,6 +1,6 @@
 # 2026 - June
 ## mx204; 20.4R3 >> 23.4R2 journey + some cool routing and memory optmizations
-- This started as an idea like... 2 years ago and due to the unique nature of our configurations there were some of the changes below couldn't use for various reasons until '23.4R2'
+- This started as an idea like... 2 years ago and due to the unique nature of our configurations there were some of the changes below couldn't use for various reasons until `23.4R2`
     - ECMP and multiple routing tables were not supported with some of these tweaks
     - JunOS memory increase was not available until a later version
 - JTAC notes + random sources from the web aiding in this journey:
