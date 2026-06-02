@@ -1,6 +1,6 @@
 # 2026 - June
 ## mx204; 20.4R3 >> 23.4R2 journey + some cool routing and memory optmizations
-- This started as an idea like... 2 years ago and due to the unique nature of our configurations there were some of the changes below couldn't use for various reasons until `23.4R2`
+- This started as an idea like... 2 years ago and due to the unique nature of our configurations there were some of the changes below couldn't use for various reasons until `23.4R2`. Basically I was annoyed with how long it took our BGP to reconverge any time `rpd` was rebooted or the device was rebooted. On average I would say this was 7-9 minutes, with these adjustments I have seen between 2-5 minutes before I could regain access to devices remotely. 
     - ECMP and multiple routing tables were not supported with some of these tweaks
     - JunOS memory increase was not available until a later version
 - JTAC notes + random sources from the web aiding in this journey:
@@ -35,7 +35,7 @@ Available:            25088136
 ## tell `rpd` to: 
 - use 64-bit if possible, fall back to 32-bit (hidden to users)
 - multithread and shard crawling routes (useful for multiple for bgp tables)
-- changing threads and shards will impact routing as `rpd` restarts
+- **changing threads and shards will impact routing as `rpd` restarts**
 - `force-64-bit` can be added without impact in my experience
 
 ```
